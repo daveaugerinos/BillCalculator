@@ -14,7 +14,7 @@
 		A2AEA1BA1E5785C600312924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEA1B91E5785C600312924 /* Assets.xcassets */; };
 		A2AEA1BD1E5785C600312924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AEA1BB1E5785C600312924 /* LaunchScreen.storyboard */; };
 		A2AEA1C81E5785C600312924 /* BillCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1C71E5785C600312924 /* BillCalculatorTests.m */; };
-		A2AEA1D41E578F9B00312924 /* Tipper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1D31E578F9B00312924 /* Tipper.m */; };
+		A2AEA1D41E578F9B00312924 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1D31E578F9B00312924 /* Bill.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		A2AEA1C31E5785C600312924 /* BillCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AEA1C71E5785C600312924 /* BillCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BillCalculatorTests.m; path = BillCalculatorTests/BillCalculatorTests.m; sourceTree = "<group>"; };
 		A2AEA1C91E5785C600312924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BillCalculatorTests/Info.plist; sourceTree = "<group>"; };
-		A2AEA1D21E578F9B00312924 /* Tipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tipper.h; sourceTree = "<group>"; };
-		A2AEA1D31E578F9B00312924 /* Tipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tipper.m; sourceTree = "<group>"; };
+		A2AEA1D21E578F9B00312924 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
+		A2AEA1D31E578F9B00312924 /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				A2AEA1B11E5785C600312924 /* AppDelegate.m */,
 				A2AEA1B31E5785C600312924 /* BillViewController.h */,
 				A2AEA1B41E5785C600312924 /* BillViewController.m */,
-				A2AEA1D21E578F9B00312924 /* Tipper.h */,
-				A2AEA1D31E578F9B00312924 /* Tipper.m */,
+				A2AEA1D21E578F9B00312924 /* Bill.h */,
+				A2AEA1D31E578F9B00312924 /* Bill.m */,
 				A2AEA1B61E5785C600312924 /* Main.storyboard */,
 				A2AEA1B91E5785C600312924 /* Assets.xcassets */,
 				A2AEA1BB1E5785C600312924 /* LaunchScreen.storyboard */,
@@ -222,7 +222,7 @@
 				A2AEA1B51E5785C600312924 /* BillViewController.m in Sources */,
 				A2AEA1B21E5785C600312924 /* AppDelegate.m in Sources */,
 				A2AEA1AF1E5785C600312924 /* main.m in Sources */,
-				A2AEA1D41E578F9B00312924 /* Tipper.m in Sources */,
+				A2AEA1D41E578F9B00312924 /* Bill.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

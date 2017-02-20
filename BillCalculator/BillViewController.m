@@ -7,80 +7,97 @@
 //
 
 #import "BillViewController.h"
-#import "Tipper.h"
+#import "Bill.h"
 
 @interface BillViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *billLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tipAmountDollarLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *viewTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *billAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tipPercentageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *splitBillAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *splitTipAmountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
+@property (weak, nonatomic) IBOutlet UITextField *peopleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
-@property (strong, nonatomic) Tipper *tipper;
+@property (weak, nonatomic) IBOutlet UILabel *splitBillAmountValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *splitTipAmountValueLabel;
+@property (strong, nonatomic) Bill *bill;
+@property (strong, nonatomic) NSDecimalNumber *billAmount;
+@property (strong, nonatomic) NSDecimalNumber *people;
+@property (strong, nonatomic) NSDecimalNumber *tipPercentage;
+@property (strong, nonatomic) NSDecimalNumber *splitBillAmount;
+@property (strong, nonatomic) NSDecimalNumber *splitTipAmount;
 
 @end
 
 @implementation BillViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
+    [super viewDidLoad];
+    
+    // Set delegates
     self.billAmountTextField.delegate = self;
+    self.peopleTextField.delegate = self;
     self.tipPercentageTextField.delegate = self;
     
-    NSDecimalNumber *initialBillAmount = [[NSDecimalNumber alloc] initWithFloat:0.00];
-    NSDecimalNumber *initialTipPercentage = [[NSDecimalNumber alloc] initWithFloat:0.15];
-
-    self.tipper = [[Tipper alloc] initWithBillAmount:initialBillAmount TipPercentage: initialTipPercentage];
+    // Initial default values and related initial bill
+    self.billAmount = [[NSDecimalNumber alloc] initWithFloat:0.00];
+    self.people = [[NSDecimalNumber alloc] initWithInt:1];
+    self.tipPercentage = [[NSDecimalNumber alloc] initWithFloat:0.15];
+    self.bill = [[Bill alloc] initWithBillAmount:self.billAmount andPeople:self.people andTipPercentage:self.tipPercentage];
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)calculateTipButton:(UIButton *)sender {
-    [self calculateTip];
+- (IBAction)adjustPeople:(UISlider *)sender {
+
+    self.peopleTextField.text = [NSString stringWithFormat:@"%.f", [sender value]];
+    [self calculateSplitBill];
 }
 
 - (IBAction)adjustTipPercentage:(UISlider *)sender {
+    
     self.tipPercentageTextField.text = [NSString stringWithFormat:@"%.f", [sender value]];
-    [self calculateTip];
+    [self calculateSplitBill];
 }
 
-- (void)calculateTip {
+- (void)calculateSplitBill {
     
-    NSDecimalNumber *tipAmount = [[NSDecimalNumber alloc] initWithString:@"0"];
-    NSDecimalNumber *billAmount = [[NSDecimalNumber alloc] initWithString:@"0"];
-    NSDecimalNumber *tipPercentage = [[NSDecimalNumber alloc] initWithString:@"15"];
-    NSDecimalNumber *hundred = [[NSDecimalNumber alloc] initWithString:@"100"];
+    NSDecimalNumber *inputedBillNumber = [[NSDecimalNumber alloc] initWithString: self.billAmountTextField.text];
+    NSDecimalNumber *inputedPeopleNumber = [[NSDecimalNumber alloc] initWithString:self.peopleTextField.text];
+    NSDecimalNumber *inputedTipNumber = [[NSDecimalNumber alloc] initWithString: self.tipPercentageTextField.text];
     
-    NSCharacterSet* invalid = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-    
-    if([self.billAmountTextField.text rangeOfCharacterFromSet:invalid].location == NSNotFound && [self.tipPercentageTextField.text rangeOfCharacterFromSet:invalid].location == NSNotFound) {
+    if([inputedBillNumber isEqual:[NSDecimalNumber notANumber]] || [inputedPeopleNumber isEqual:[NSDecimalNumber notANumber]] || [inputedTipNumber isEqual:[NSDecimalNumber notANumber]]) {
         
-        if(![self.billAmountTextField.text isEqualToString:@""] && ![self.tipPercentageTextField.text isEqualToString:@""]) {
-            
-            billAmount = [[NSDecimalNumber alloc] initWithString:self.billAmountTextField.text];
-            tipPercentage = [[NSDecimalNumber alloc] initWithString:self.tipPercentageTextField.text];
-            tipPercentage = [tipPercentage decimalNumberByDividingBy:hundred];
-            tipAmount = [self.tipper calculateTipWithBillAmount:billAmount andTipPercentage:tipPercentage];
-        }
+        self.splitBillAmountValueLabel.text = @"$ 0.00";
+        self.splitTipAmountValueLabel.text = @"$ 0.00";
         
-        else {
-            tipAmount = [self.tipper calculateTipWithBillAmount:billAmount andTipPercentage:tipPercentage];
-        }
-        
-        NSNumberFormatter *formatDollars = [[NSNumberFormatter alloc] init];
-        [formatDollars setNumberStyle:NSNumberFormatterCurrencyStyle];
-        
-        self.tipAmountLabel.text = [formatDollars stringFromNumber:tipAmount];
+        return;
     }
     
     else {
-        self.tipAmountLabel.text = @"$0.00";
+        // Split bill amount
+        self.billAmount = [[NSDecimalNumber alloc] initWithString:self.billAmountTextField.text];
+        self.people = [[NSDecimalNumber alloc] initWithString:self.peopleTextField.text];
+        self.splitBillAmount = [self.bill calculateSplitBillwithBillAmount:self.billAmount andPeople:self.people];
+        
+        // Split tip amount
+        self.tipPercentage = [[NSDecimalNumber alloc] initWithString:self.tipPercentageTextField.text];
+        NSDecimalNumber *hundred = [[NSDecimalNumber alloc] initWithString:@"100"];
+        self.tipPercentage = [self.tipPercentage decimalNumberByDividingBy:hundred];
+        self.splitTipAmount = [self.bill calculateSplitTipWithTipPercentage:self.tipPercentage];
+    
+        NSNumberFormatter *formatDollars = [[NSNumberFormatter alloc] init];
+        [formatDollars setNumberStyle:NSNumberFormatterCurrencyStyle];
+        
+        self.splitBillAmountValueLabel.text = [formatDollars stringFromNumber:self.splitBillAmount];
+        self.splitTipAmountValueLabel.text = [formatDollars stringFromNumber:self.splitTipAmount];
     }
 }
 
@@ -91,7 +108,7 @@
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(calculateTip) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(calculateSplitBill) name:UITextFieldTextDidChangeNotification object:nil];
     
     return YES;
 }
@@ -107,7 +124,7 @@
     
     [self.view endEditing:YES];
     
-    [self calculateTip];
+    [self calculateSplitBill];
     
     return NO;
 }
@@ -126,6 +143,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.billAmountTextField resignFirstResponder];
+    [self.peopleTextField resignFirstResponder];
     [self.tipPercentageTextField resignFirstResponder];
 }
 
