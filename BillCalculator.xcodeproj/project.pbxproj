@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2AEA1AF1E5785C600312924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1AE1E5785C600312924 /* main.m */; };
+		A2AEA1B21E5785C600312924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1B11E5785C600312924 /* AppDelegate.m */; };
+		A2AEA1B51E5785C600312924 /* BillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1B41E5785C600312924 /* BillViewController.m */; };
+		A2AEA1B81E5785C600312924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AEA1B61E5785C600312924 /* Main.storyboard */; };
+		A2AEA1BA1E5785C600312924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEA1B91E5785C600312924 /* Assets.xcassets */; };
+		A2AEA1BD1E5785C600312924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AEA1BB1E5785C600312924 /* LaunchScreen.storyboard */; };
+		A2AEA1C81E5785C600312924 /* BillCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1C71E5785C600312924 /* BillCalculatorTests.m */; };
+		A2AEA1D41E578F9B00312924 /* Tipper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AEA1D31E578F9B00312924 /* Tipper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2AEA1C41E5785C600312924 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2AEA1A21E5785C500312924 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2AEA1A91E5785C500312924;
+			remoteInfo = TipCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2AEA1AA1E5785C600312924 /* BillCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AEA1AE1E5785C600312924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2AEA1B01E5785C600312924 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2AEA1B11E5785C600312924 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2AEA1B31E5785C600312924 /* BillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BillViewController.h; sourceTree = "<group>"; };
+		A2AEA1B41E5785C600312924 /* BillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillViewController.m; sourceTree = "<group>"; };
+		A2AEA1B71E5785C600312924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2AEA1B91E5785C600312924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2AEA1BC1E5785C600312924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2AEA1BE1E5785C600312924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2AEA1C31E5785C600312924 /* BillCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AEA1C71E5785C600312924 /* BillCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BillCalculatorTests.m; path = BillCalculatorTests/BillCalculatorTests.m; sourceTree = "<group>"; };
+		A2AEA1C91E5785C600312924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = BillCalculatorTests/Info.plist; sourceTree = "<group>"; };
+		A2AEA1D21E578F9B00312924 /* Tipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tipper.h; sourceTree = "<group>"; };
+		A2AEA1D31E578F9B00312924 /* Tipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tipper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2AEA1A71E5785C500312924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AEA1C01E5785C600312924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2AEA1A11E5785C500312924 = {
+			isa = PBXGroup;
+			children = (
+				A2AEA1AC1E5785C600312924 /* BillCalculator */,
+				A2AEA1C61E5785C600312924 /* BillCalculatorTests */,
+				A2AEA1AB1E5785C600312924 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2AEA1AB1E5785C600312924 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2AEA1AA1E5785C600312924 /* BillCalculator.app */,
+				A2AEA1C31E5785C600312924 /* BillCalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2AEA1AC1E5785C600312924 /* BillCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				A2AEA1B01E5785C600312924 /* AppDelegate.h */,
+				A2AEA1B11E5785C600312924 /* AppDelegate.m */,
+				A2AEA1B31E5785C600312924 /* BillViewController.h */,
+				A2AEA1B41E5785C600312924 /* BillViewController.m */,
+				A2AEA1D21E578F9B00312924 /* Tipper.h */,
+				A2AEA1D31E578F9B00312924 /* Tipper.m */,
+				A2AEA1B61E5785C600312924 /* Main.storyboard */,
+				A2AEA1B91E5785C600312924 /* Assets.xcassets */,
+				A2AEA1BB1E5785C600312924 /* LaunchScreen.storyboard */,
+				A2AEA1BE1E5785C600312924 /* Info.plist */,
+				A2AEA1AD1E5785C600312924 /* Supporting Files */,
+			);
+			path = BillCalculator;
+			sourceTree = "<group>";
+		};
+		A2AEA1AD1E5785C600312924 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2AEA1AE1E5785C600312924 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2AEA1C61E5785C600312924 /* BillCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2AEA1C71E5785C600312924 /* BillCalculatorTests.m */,
+				A2AEA1C91E5785C600312924 /* Info.plist */,
+			);
+			name = BillCalculatorTests;
+			path = TipCalculatorTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2AEA1A91E5785C500312924 /* BillCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AEA1CC1E5785C600312924 /* Build configuration list for PBXNativeTarget "BillCalculator" */;
+			buildPhases = (
+				A2AEA1A61E5785C500312924 /* Sources */,
+				A2AEA1A71E5785C500312924 /* Frameworks */,
+				A2AEA1A81E5785C500312924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BillCalculator;
+			productName = TipCalculator;
+			productReference = A2AEA1AA1E5785C600312924 /* BillCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2AEA1C21E5785C600312924 /* BillCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AEA1CF1E5785C600312924 /* Build configuration list for PBXNativeTarget "BillCalculatorTests" */;
+			buildPhases = (
+				A2AEA1BF1E5785C600312924 /* Sources */,
+				A2AEA1C01E5785C600312924 /* Frameworks */,
+				A2AEA1C11E5785C600312924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2AEA1C51E5785C600312924 /* PBXTargetDependency */,
+			);
+			name = BillCalculatorTests;
+			productName = TipCalculatorTests;
+			productReference = A2AEA1C31E5785C600312924 /* BillCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2AEA1A21E5785C500312924 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Dave Augerinos";
+				TargetAttributes = {
+					A2AEA1A91E5785C500312924 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					A2AEA1C21E5785C600312924 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A2AEA1A91E5785C500312924;
+					};
+				};
+			};
+			buildConfigurationList = A2AEA1A51E5785C500312924 /* Build configuration list for PBXProject "BillCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2AEA1A11E5785C500312924;
+			productRefGroup = A2AEA1AB1E5785C600312924 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2AEA1A91E5785C500312924 /* BillCalculator */,
+				A2AEA1C21E5785C600312924 /* BillCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2AEA1A81E5785C500312924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AEA1BD1E5785C600312924 /* LaunchScreen.storyboard in Resources */,
+				A2AEA1BA1E5785C600312924 /* Assets.xcassets in Resources */,
+				A2AEA1B81E5785C600312924 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AEA1C11E5785C600312924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2AEA1A61E5785C500312924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AEA1B51E5785C600312924 /* BillViewController.m in Sources */,
+				A2AEA1B21E5785C600312924 /* AppDelegate.m in Sources */,
+				A2AEA1AF1E5785C600312924 /* main.m in Sources */,
+				A2AEA1D41E578F9B00312924 /* Tipper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AEA1BF1E5785C600312924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AEA1C81E5785C600312924 /* BillCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2AEA1C51E5785C600312924 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2AEA1A91E5785C500312924 /* BillCalculator */;
+			targetProxy = A2AEA1C41E5785C600312924 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2AEA1B61E5785C600312924 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2AEA1B71E5785C600312924 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2AEA1BB1E5785C600312924 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2AEA1BC1E5785C600312924 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2AEA1CA1E5785C600312924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2AEA1CB1E5785C600312924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2AEA1CD1E5785C600312924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BillCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = daveaugerinos.BillCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2AEA1CE1E5785C600312924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BillCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = daveaugerinos.BillCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A2AEA1D01E5785C600312924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TipCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = daveaugerinos.TipCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillCalculator.app/BillCalculator";
+			};
+			name = Debug;
+		};
+		A2AEA1D11E5785C600312924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TipCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = daveaugerinos.TipCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillCalculator.app/BillCalculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2AEA1A51E5785C500312924 /* Build configuration list for PBXProject "BillCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AEA1CA1E5785C600312924 /* Debug */,
+				A2AEA1CB1E5785C600312924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AEA1CC1E5785C600312924 /* Build configuration list for PBXNativeTarget "BillCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AEA1CD1E5785C600312924 /* Debug */,
+				A2AEA1CE1E5785C600312924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AEA1CF1E5785C600312924 /* Build configuration list for PBXNativeTarget "BillCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AEA1D01E5785C600312924 /* Debug */,
+				A2AEA1D11E5785C600312924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2AEA1A21E5785C500312924 /* Project object */;
+}
